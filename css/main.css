@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.hero_bg{
+    background: #307D99 url('../images/bg.jpg');
+    color: white;
+    text-align: center;
+    padding-bottom:4em;
+}
+
+header{
+    padding: 1em 0;
+}
+
+.hero_bg a{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+section{
+    padding: 0 1em;
+}
+
+h1 span{
+    text-transform: uppercase;
+    text-decoration: underline blue;
+    margin-top: 2px;
+    font-size: 1.2rem;
+}
+
+.hero_bg p{
+    font-weight: bold;
+    margin: 0 1em 3em;
+}
+
+.form_container{
+    background-color: white;
+    margin: 2em -1em 0;
+    padding: 2em;
+}
+
+.form_container p{
+    color: grey;
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-top: 0.5em;
+}
+
+label{
+    color: #2d7d98;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+}
+
+input[type=button]{
+    background-color: orange;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 1em 0em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    font-size: 1.3em;
+    box-sizing: border-box;
+    cursor:pointer
+}
+
+input[type=button]:hover{
+    background-color: rgb(200, 132, 6);
+
+}
+
+
+input[type=text]{
+    border: 1px solid #707070;
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.5em;
+}
