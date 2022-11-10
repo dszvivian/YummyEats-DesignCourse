@@ -7,9 +7,26 @@ body{
 
 .hero_bg{
     background: #307D99 url('../images/bg.jpg');
+    background-position: 12% 83%;
     color: white;
     text-align: center;
     padding-bottom:4em;
+}
+
+.overlay{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    color: white;
+    place-content: center;
+    display: none;
+    opacity: 0;
+}
+
+.animate-overlay{
+    animation: overlay 3s forwards;
 }
 
 header{
@@ -25,10 +42,11 @@ header{
 
 section{
     padding: 0 1em;
-}
+} 
 
 h1 span{
     text-transform: uppercase;
+    display: block;
     text-decoration: underline blue;
     margin-top: 2px;
     font-size: 1.2rem;
@@ -37,6 +55,7 @@ h1 span{
 .hero_bg p{
     font-weight: bold;
     margin: 0 1em 3em;
+    line-height: 2em;
 }
 
 .form_container{
@@ -55,7 +74,7 @@ h1 span{
 label{
     color: #2d7d98;
     font-weight: bold;
-    display: block;
+    display: flex;
     margin-bottom: 1em;
     font-size: 1.2rem;
 }
@@ -69,19 +88,154 @@ input[type=button]{
     border-radius: 0.5em;
     font-weight: bold;
     font-size: 1.3em;
-    box-sizing: border-box;
     cursor:pointer
 }
 
 input[type=button]:hover{
     background-color: rgb(200, 132, 6);
-
 }
 
 
 input[type=text]{
     border: 1px solid #707070;
     width: 100%;
+    box-sizing: border-box;
     padding: 1em;
     border-radius: 0.5em;
+    margin-top: 1.2em;
+}
+
+.authentic{
+    margin: 0;
+    text-align: center11;
+}
+
+img{
+    width: 100%
+}
+
+.right_col h2{
+    text-transform: uppercase;
+    text-decoration: underline blue;
+}
+
+.right_col p{
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+
+@media (min-width: 630px){
+    
+    section{
+        margin: 0 4em;
+    }
+
+}
+
+@media (min-width: 930px){
+
+    .hero_bg
+    {
+        text-align: left;
+    }
+
+    .hero_bg p{
+        margin: 0 0 2em;
+    }
+
+    .hero_bg section{
+        width: 65%;
+    }
+
+
+    .form_container{
+        border-radius: 2em;
+        margin: 2em 0;
+        padding:2em;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0,0.3);
+    }
+
+    form{
+        display: flex;
+    }
+
+    .form_left{
+        width: 70%;
+    }
+
+    label{
+        margin: 0;
+    }
+
+    input[type="button"] {
+        height: fit-content;
+        font-size: 1.1em;
+        margin-left: 1em;
+        margin-top: 2.2em;
+        padding: .7em 0;
+        width: 30%;
+    }
+
+    .hero_bg p{
+        margin-bottom: 0;
+    }
+   
+
+    label{
+        margin: 0;
+    }
+
+    section.authentic{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas: "hello world";
+    }
+
+    .right_col{
+        grid-area: world;
+    }
+
+    img {
+        grid-area: hello;
+    }
+   
+
+}
+
+
+.top {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0em);
+    }
+
+
+}
+
+@keyframes overlay{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    70%{
+         opacity:1;
+    }
+    100%{
+        opacity:0;
+        display: none;
+        visibility: hidden;
+    }
 }

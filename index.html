@@ -9,6 +9,13 @@
 </head>
 <body>
 
+    <div class="overlay" id="overlay">
+
+        <h1>Searching....</h1>
+
+
+    </div>
+
     <div class="hero_bg">
 
         <section class="top">
@@ -22,15 +29,21 @@
 
             <div class="form_container">
 
-                <form action="">
-                    <div class="form_left">
-                        <label for="city">Enter the City: </label>
-                        <input type="text" name="city" id="city">
-                        <p>Example: "San Diego"</p>
-                        <input type="button" value="Find Food Now">
-                    </div>
-                </form>
+               
+                    <form action="">
+                        <div class="form_left">
+                            <label for="city">Enter your city:</label>
+                            <input type="text" name="city" id="city">
+                            <p>Example: "San Diego"</p>
+                        </div>
+    
+                        <input type="button" value="Find Food Now" id="cta-btn">
+                    </form>
+            
             </div>
+
+
+        </div>
 
         </section>
         <section class="authentic">
@@ -45,8 +58,17 @@
         </section>
 
 
-    </div>
+        <script>
 
+            let btn = document.getElementById('cta-btn')
+            let overlay = document.getElementById('overlay')
+
+            btn.addEventListener('click',()=>{
+                overlay.style.display = 'grid'
+                overlay.classList.add('animate-overlay')
+            })
+    
+        </script>
     
 </body>
 </html>
